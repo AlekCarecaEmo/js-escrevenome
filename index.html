@@ -1,0 +1,33 @@
+let cor;
+let ph; // x;
+let pv; // y;
+
+let ph2; // x;
+let pv2; // y;
+
+function setup() {
+  createCanvas(400, 400); // width x height
+  background(color(100, 0, 0));
+  cor = color(random(0, 255), random(0, 255), random(0, 255));
+  ph = 0;
+  pv = random(height);
+  ph2 = 0;
+  pv2 = 200;
+}
+
+function draw() {
+  
+  fill(cor);
+  circle(ph, pv, 50)
+  circle(ph2, pv2, 50)
+  
+  ph+= random(0,3);
+  pv+= random(-3,3);
+  ph2+= random(0,3);
+  pv2+= random(-3,3);
+  
+  if(mouseIsPressed) {
+    cor = color(random(0, 255), random(0, 255), random(0,255), random(0, 100));
+    
+  }
+}
